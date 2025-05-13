@@ -73,4 +73,16 @@ public class Group {
     public void setStudents(List<Student> students) {
         this.students = students;
     }
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "groupId=" + groupId +
+                ", groupName='" + groupName + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", instructor=" + instructor +
+                ", students=" + students +
+                '}';
+    }
 }

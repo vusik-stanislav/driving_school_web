@@ -1,7 +1,9 @@
 package com.example.driving_school_web.controller;
 
 import com.example.driving_school_web.model.Group;
+import com.example.driving_school_web.model.Instructor;
 import com.example.driving_school_web.repository.GroupRepository;
+import com.example.driving_school_web.repository.InstructorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +16,12 @@ import java.util.List;
 @RequestMapping("/api/groups")
 @CrossOrigin(origins = "http://localhost:5173")
 public class GroupController {
+
     @Autowired
     private GroupRepository groupRepository;
+
+    @Autowired
+    private InstructorRepository instructorRepository;
 
     @GetMapping
     public List<Group> getAllGroups() {

@@ -62,4 +62,15 @@ public class Instructor {
     public void setGroups(List<Group> groups) {
         this.groups = groups;
     }
+
+    @Override
+    public String toString() {
+        return "Instructor{" +
+                "instructorId=" + instructorId +
+                ", instructorName='" + instructorName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", hireDate=" + hireDate +
+                ", groups=" + groups +
+                '}';
+    }
 }

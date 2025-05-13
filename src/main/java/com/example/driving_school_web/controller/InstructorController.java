@@ -28,6 +28,7 @@ public class InstructorController {
 
     @PostMapping
     public Instructor createInstructor(@RequestBody Instructor instructor) {
+        System.out.println(instructor);
         return instructorRepository.save(instructor);
     }
 
